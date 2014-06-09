@@ -81,20 +81,20 @@
 							<option value="b">B</option>
 						</select>
 						<select  id="chord-style" name="type">
-							<option value="dur"> </option>
-							<option value="moll">m</option>
-							<option value="sus2">sus2</option>
-							<option value="sus">sus</option>
-							<option value="7sus4">7sus4</option>
-							<option value="aug5">5+</option>
-							<option value="maug5">m5+</option>
-							<option value="mm5">m-5</option>
-							<option value="m7m5">m7-5</option>
-							<option value="6">6</option>
-							<option value="m6">m6</option>
-							<option value="7">7</option>
-							<option value="m7">m7</option>
-							<option value="maj7">maj7</option>
+							<option value="dur">speed</option>
+							<option value="moll">60</option>
+							<option value="sus2">70</option>
+							<option value="sus">80</option>
+							<option value="7sus4">90</option>
+							<option value="aug5">100</option>
+							<option value="maug5">110</option>
+							<option value="mm5">120</option>
+							<option value="m7m5">130</option>
+							<option value="6">140</option>
+							<option value="m6">150</option>
+							<!-- <option value="7">160</option>
+							<option value="m7">170</option>
+							<option value="maj7">180</option>
 							<option value="dim7">dim7</option>
 							<option value="7b9">7?9</option>
 							<option value="7s9">7#9</option>
@@ -103,12 +103,142 @@
 							<option value="maj9">maj9</option>
 							<option value="11">11</option>
 							<option value="add11">add11</option>
-							<option value="13">13</option>
+							<option value="13">13</option> -->
 						</select>
 					</div>
 					<div class="sound" id="voice">Grand Piano</div>
-						<a href="#" class="myButton">Record</a>
-						<style type="text/css">
+					<label>
+					    <select id="TONE" name="tone">
+							<option value="def">調性</option>
+							<option value="G">G大調</option>
+							<option value="D">D大調</option>
+							<option value="A">A大調</option>
+							<option value="E">E大調</option>
+							<option value="B">B大調</option>
+							<option value="F">F大調</option>
+							<option value="dB">降B大調</option>
+							<option value="dE">降E大調</option>
+							<option value="dA">降A大調</option>
+							<option value="dD">降D大調</option>
+						</select>
+					</label>
+					<style type="text/css">
+						body, html {background:#444; text-align:center; padding:50px 0;}
+						/* The CSS */
+						select {
+						    padding:3px;
+						    margin: 0;
+						    -webkit-border-radius:4px;
+						    -moz-border-radius:4px;
+						    border-radius:4px;
+						    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    background: #f8f8f8;
+						    color:#888;
+						    border:none;
+						    outline:none;
+						    display: inline-block;
+						    -webkit-appearance:none;
+						    -moz-appearance:none;
+						    appearance:none;
+						    cursor:pointer;
+						}
+
+						/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+						@media screen and (-webkit-min-device-pixel-ratio:0) {
+						    select {padding-right:18px}
+						}
+
+						label {position:relative}
+						label:after {
+						    content:'<>';
+						    font:11px "Consolas", monospace;
+						    color:#aaa;
+						    -webkit-transform:rotate(90deg);
+						    -moz-transform:rotate(90deg);
+						    -ms-transform:rotate(90deg);
+						    transform:rotate(90deg);
+						    right:8px; top:2px;
+						    padding:0 0 2px;
+						    border-bottom:1px solid #ddd;
+						    position:absolute;
+						    pointer-events:none;
+						}
+						label:before {
+						    content:'';
+						    right:6px; top:0px;
+						    width:20px; height:20px;
+						    background:#f8f8f8;
+						    position:absolute;
+						    pointer-events:none;
+						    display:block;
+						}
+					</style>
+					<label>
+						<select  id="BEAT" name="beat">
+							<option value="def">拍子</option>
+							<option value="24">２／４</option>
+							<option value="34">３／４</option>
+							<option value="44">４／４</option>
+							<option value="68">６／８</option>
+						</select>
+					</label>
+					<style type="text/css">
+						body, html {background:#444; text-align:center; padding:50px 0;}
+						/* The CSS */
+						select {
+						    padding:3px;
+						    margin: 0;
+						    -webkit-border-radius:4px;
+						    -moz-border-radius:4px;
+						    border-radius:4px;
+						    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+						    background: #f8f8f8;
+						    color:#888;
+						    border:none;
+						    outline:none;
+						    display: inline-block;
+						    -webkit-appearance:none;
+						    -moz-appearance:none;
+						    appearance:none;
+						    cursor:pointer;
+						}
+
+						/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+						@media screen and (-webkit-min-device-pixel-ratio:0) {
+						    select {padding-right:18px}
+						}
+
+						label {position:relative}
+						label:after {
+						    content:'<>';
+						    font:11px "Consolas", monospace;
+						    color:#aaa;
+						    -webkit-transform:rotate(90deg);
+						    -moz-transform:rotate(90deg);
+						    -ms-transform:rotate(90deg);
+						    transform:rotate(90deg);
+						    right:8px; top:2px;
+						    padding:0 0 2px;
+						    border-bottom:1px solid #ddd;
+						    position:absolute;
+						    pointer-events:none;
+						}
+						label:before {
+						    content:'';
+						    right:6px; top:0px;
+						    width:20px; height:20px;
+						    background:#f8f8f8;
+						    position:absolute;
+						    pointer-events:none;
+						    display:block;
+						}
+					</style>
+					<a href="#" class="myButton">Record</a>
+					<style type="text/css">
 						.myButton {
 							-moz-box-shadow: 0px 19px 14px -7px #276873;
 							-webkit-box-shadow: 0px 19px 14px -7px #276873;
@@ -148,67 +278,7 @@
 							position:relative;
 							top:1px;
 						}
-						</style>
-						<label>
-						    <select>
-						        <option selected> Select Box </option>
-						        <option>Option 1</option>
-						        <option>Option 2</option>
-						    </select>
-						</label>
-						<style type="text/css">
-							body, html {background:#444; text-align:center; padding:50px 0;}
-							/* The CSS */
-							select {
-							    padding:3px;
-							    margin: 0;
-							    -webkit-border-radius:4px;
-							    -moz-border-radius:4px;
-							    border-radius:4px;
-							    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-							    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-							    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-							    background: #f8f8f8;
-							    color:#888;
-							    border:none;
-							    outline:none;
-							    display: inline-block;
-							    -webkit-appearance:none;
-							    -moz-appearance:none;
-							    appearance:none;
-							    cursor:pointer;
-							}
-
-							/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
-							@media screen and (-webkit-min-device-pixel-ratio:0) {
-							    select {padding-right:18px}
-							}
-
-							label {position:relative}
-							label:after {
-							    content:'<>';
-							    font:11px "Consolas", monospace;
-							    color:#aaa;
-							    -webkit-transform:rotate(90deg);
-							    -moz-transform:rotate(90deg);
-							    -ms-transform:rotate(90deg);
-							    transform:rotate(90deg);
-							    right:8px; top:2px;
-							    padding:0 0 2px;
-							    border-bottom:1px solid #ddd;
-							    position:absolute;
-							    pointer-events:none;
-							}
-							label:before {
-							    content:'';
-							    right:6px; top:0px;
-							    width:20px; height:20px;
-							    background:#f8f8f8;
-							    position:absolute;
-							    pointer-events:none;
-							    display:block;
-							}
-						</style>
+					</style>
 				</div>
 			</div>
 			<div class="keySholder">
@@ -242,27 +312,19 @@
 			</div>
 			<div id="sound"></div>
 		</div>
-		
-		<label>
-		    <select>
-		        <option selected> Select Box </option>
-		        <option>Option 1</option>
-		        <option>Option 2</option>
-		    </select>
-		</label>
 
-		
 		<footer>
 			<div class="share">
 				<div id="fb-root"></div>
 				<div class="fb-like" data-send="true" data-href="https://www.facebook.com/plypp" data-layout="button_count" data-show-faces="false"></div>
-				<a href="https://twitter.com/plypp_piano" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a>
 				<a href="https://twitter.com/plypp_piano" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @plypp_piano</a>
 				<div class="g-plusone"></div>
 			</div>
 			<br>
-            <h1>Plypp Piano</h1>
-            <p>Play the piano online with Plypp Piano. Learn to play chords. Choose between different instruments. Built with HTML5, CSS3 and JavaScript. For Chrome.</p><br>
+            <h1>Web Piano</h1>
+            <p>Play the piano online with Plypp Piano. Learn to play chords.</p>
+            <p>Built with HTML5, CSS3 and JavaScript. For Chrome for better use.</p>
+            <br>
 			<a href="https://www.facebook.com/plypp" title="Plypp on Facebook">Plypp on Facebook</a><br>
 			<a href="https://twitter.com/plypp_piano" title="Plypp on Twitter">@plypp_piano</a><br>
 			<a href="https://plus.google.com/+PlyppNet" title="Plypp on Google+" rel="publisher">Plypp on G+</a><br>
