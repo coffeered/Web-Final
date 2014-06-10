@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,27 +13,32 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<script type="application/ld+json">
-		{
-		  "@context" : "http://schema.org",
-		  "@type" : "Product",
-		  "name" : "Plypp Piano",
-		  "image" : "http://plypp.net/img/icon_128.png",
-		  "description" : "Piano application for Google Chrome made in HTML5 with CSS3",
-		  "url" : "http://plypp.net",
-		  "brand" : {
-		    "@type" : "Brand",
-		    "logo" : "http://vufuzi.se/img/logo.png",
-		    "name" : "Vufuzi"
-		  }
-		}
+			{
+			  "@context" : "http://schema.org",
+			  "@type" : "Product",
+			  "name" : "Plypp Piano",
+			  "image" : "http://plypp.net/img/icon_128.png",
+			  "description" : "Piano application for Google Chrome made in HTML5 with CSS3",
+			  "brand" : {
+			    "@type" : "Brand",
+			    "logo" : "http://vufuzi.se/img/logo.png",
+			    "name" : "Vufuzi"
+			  }
+			}
 		</script>
 	</head>
 	<body>
-		<div class="supportBrowsers"><span>Tested working in:</span> Chrome, Firefox, Internet Explorer 9</div>
-		<div class="buttontop"><a href="drums">Try the drums!</a></div>
-		<div id="loading"><span id="load-notes"><span id="num">0%</span></span></div>
-		<div class="mobile"><p>Sorry, we don't support mobile at the moment. Go onto a PC and rock on with Plypp Piano!</p></div>
-		<div class="chordMarkers">
+		<div class="supportBrowsers">
+			<span>Tested working in:</span>
+			Chrome, Firefox, Safari
+		</div>
+		<div class="buttontop"><a href="#">Mail ME!</a></div>
+		<div id="loading">
+			<span id="load-notes">
+				<span id="num">0%</span>
+			</span>
+		</div>
+		<div class="chordMarkers"> 
 			<a class="c"></a>
 			<a class="cs"></a>
 			<a class="d"></a>
@@ -61,12 +65,13 @@
 			<a class="b1"></a>
 			<a class="c2"></a>
 		</div>
+		<br><br>
 		<div class="piano" role="main">
 			<div class="panel">
 				<div class="screen">
 					<div class="chords">
-						<select id="chord-key" name="key">
-							<option value="none"> </option>
+						<select id="chord-key" name="key"> <!-- 選單空 -->
+							<option value="none"></option>
 							<option value="c">C</option>
 							<option value="cs">C#</option>
 							<option value="d">D</option>
@@ -80,7 +85,7 @@
 							<option value="as">A#</option>
 							<option value="b">B</option>
 						</select>
-						<select  id="chord-style" name="type">
+						<select  id="chord-style" name="type"> <!-- speed選單 -->
 							<option value="dur">speed</option>
 							<option value="moll">60</option>
 							<option value="sus2">70</option>
@@ -107,7 +112,7 @@
 						</select>
 					</div>
 					<div class="sound" id="voice">Grand Piano</div>
-					<label>
+					<label> <!-- 調性選單 -->
 					    <select id="TONE" name="tone">
 							<option value="def">調性</option>
 							<option value="G">G大調</option>
@@ -123,7 +128,9 @@
 						</select>
 					</label>
 					<style type="text/css">
-						body, html {background:#444; text-align:center; padding:50px 0;}
+						body, html {
+							background:#444; text-align:center; padding:50px 0;
+						}
 						/* The CSS */
 						select {
 						    padding:3px;
@@ -175,7 +182,8 @@
 						    display:block;
 						}
 					</style>
-					<label>
+
+					<label> <!-- 拍子選單 -->
 						<select  id="BEAT" name="beat">
 							<option value="def">拍子</option>
 							<option value="24">２／４</option>
@@ -185,7 +193,9 @@
 						</select>
 					</label>
 					<style type="text/css">
-						body, html {background:#444; text-align:center; padding:50px 0;}
+						body, html {
+							background-image: url("./photo/background4.jpg"); text-align:center; padding:0px 0;
+						}
 						/* The CSS */
 						select {
 						    padding:3px;
@@ -237,7 +247,8 @@
 						    display:block;
 						}
 					</style>
-					<a href="#" class="myButton">Record</a>
+
+					<a href="#" class="myButton">Record</a> <!-- Record 按鈕 -->
 					<style type="text/css">
 						.myButton {
 							-moz-box-shadow: 0px 19px 14px -7px #276873;
@@ -279,8 +290,10 @@
 							top:1px;
 						}
 					</style>
+
 				</div>
 			</div>
+
 			<div class="keySholder">
 				<div id="keyCS" class="keyS"><a>C#</a></div>
 				<div id="keyDS" class="keyS"><a>D#</a></div>
@@ -316,19 +329,30 @@
 		<footer>
 			<div class="share">
 				<div id="fb-root"></div>
-				<div class="fb-like" data-send="true" data-href="https://www.facebook.com/plypp" data-layout="button_count" data-show-faces="false"></div>
-				<a href="https://twitter.com/plypp_piano" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @plypp_piano</a>
+				<div class="fb-like" data-send="true" data-href="https://www.facebook.com/plypp" data-layout="button_count" data-show-faces="false">
+				</div>
+				<a href="#" class="twitter-follow-button" data-show-count="false" data-lang="en">
+					Follow @web_piano
+				</a>
 				<div class="g-plusone"></div>
 			</div>
 			<br>
             <h1>Web Piano</h1>
-            <p>Play the piano online with Plypp Piano. Learn to play chords.</p>
+            <p>Play the piano online with Web Piano. Learn to play chords.</p>
             <p>Built with HTML5, CSS3 and JavaScript. For Chrome for better use.</p>
             <br>
-			<a href="https://www.facebook.com/plypp" title="Plypp on Facebook">Plypp on Facebook</a><br>
-			<a href="https://twitter.com/plypp_piano" title="Plypp on Twitter">@plypp_piano</a><br>
-			<a href="https://plus.google.com/+PlyppNet" title="Plypp on Google+" rel="publisher">Plypp on G+</a><br>
-			Piano created by <a href="http://plus.google.com/+JeremyKarlsson?rel=author" title="Jeremy Karlsson's on Gooogle+">Jeremy Karlsson</a> | <a href="http://enji.se">enji.se</a> | Mail: <a href="mailto:jeremy@enji.se" title="Send a mail to Jeremy">jeremy@enji.se</a>
+			<a href="https://www.facebook.com/" title="Plypp on Facebook">
+				We on Facebook
+			</a>
+			<br>
+			Piano created by 
+			<a href="#" title="On Google+">
+				A
+			</a> | <a href="#">
+				B
+			</a> | <a href="#" title="mail">
+				C
+			</a>
 		</footer>
 		<script src="js/zepto.min.js"></script>
 		<script src="js/script.min.js"></script>
